@@ -1,28 +1,49 @@
 @import url(./normalize.css);
+@import url(./reset.css);
 
-
+/* 본문 스타일 */
 body {
   background: #ffc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-weight: 100;
 }
 
+/* 레이아웃 */
+.header, .visual, main, .slogan, .footer-inner {
+  width: 940px;
+  box-sizing: border-box;  /* width(padding+border) + margin = border-box */
+  margin: 0 auto;
+}
+
+/* 헤더 */
 .header {
   background: pink;
+  padding: 0 30px;
+  /* margin은 투명한 영역이라 상자가 이동한게 아니라 커진거임 */
+  /* margin 좌우 auto하면 가운데 정렬 */
+  height: 15vh;
 }
 
+/* 비주얼 */
 .visual {
   background: orange;
+  height: 10vh;
 }
 
+/* 메인 */
 .main {
   background: lightgreen;
+  height: 50vh;
 }
-
+/* 슬로건 */
 .slogan {
   background: skyblue;
+  height: 10vh;
 }
-
+/* 푸터 */
 .footer {
   background: gray;
+}
+.footer-inner{
+  background: silver;
+  height: 15vh;
 }
