@@ -1,6 +1,12 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+/* 기본 스타일 */
+*, *::before, *::after {       /* 전체 선택자 */
+  box-sizing: border-box;  /* width(padding+border) + margin = border-box */
+
+}
+
 /* 본문 스타일 */
 body {
   background: #ffc;
@@ -10,7 +16,6 @@ body {
 /* 레이아웃 */
 .header, .visual, main, .slogan, .footer-inner {
   width: 940px;
-  box-sizing: border-box;  /* width(padding+border) + margin = border-box */
   margin: 0 auto;
 }
 
@@ -33,11 +38,43 @@ body {
 .main {
   background: lightgreen;
   height: 50vh;
+  display: flow-root;
+  /* overflow: hidden; */
+  padding: 0 15px;
 }
+
+/* .main::after{
+  content: "";
+  clear: both;
+  display: block;
+} */
+
+.group{
+  margin: 0 15px;
+  float: left;
+}
+
+.group1{
+  background: violet;
+  width: 250px;
+} 
+
+.group2{
+  background: salmon;
+  width: 380px;
+}
+
+.group3{
+  background: gold;
+  width: 190px;
+}
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
   height: 10vh;
+  /* clear: both;
+  margin-top: 10px; */
 }
 /* 푸터 */
 .footer {
