@@ -38,20 +38,8 @@ body {
 .main {
   background: lightgreen;
   height: 50vh;
-  display: flow-root;
-  /* overflow: hidden; */
-  padding: 0 15px;
-}
-
-/* .main::after{
-  content: "";
-  clear: both;
-  display: block;
-} */
-
-.group{
-  margin: 0 15px;
-  float: left;
+  display: flex;
+  flex-direction: row;
 }
 
 .group1{
