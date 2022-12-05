@@ -1,5 +1,6 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
 
 /* 기본 스타일 */
 *,
@@ -56,9 +57,9 @@ body {
 } */
 /* !important 쓰면 이런 점수 다 무력화, 무조건 자기가 적용됨 */
 
-.member li:nth-child(n + 2)::before{
+/* .member li:nth-child(n + 2)::before{
   content: ":";
-}
+} */
 
 
 
