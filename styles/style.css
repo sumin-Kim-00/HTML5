@@ -2,9 +2,10 @@
 @import url(./reset.css);
 
 /* 기본 스타일 */
-*, *::before, *::after {       /* 전체 선택자 */
+*,
+*::before, 
+*::after {       /* *->전체 선택자 */
   box-sizing: border-box;  /* width(padding+border) + margin = border-box */
-
 }
 
 /* 본문 스타일 */
@@ -21,12 +22,45 @@ body {
 
 /* 헤더 */
 .header {
-  background: pink;
+  background: #fff;
   padding: 0 30px;
   /* margin은 투명한 영역이라 상자가 이동한게 아니라 커진거임 */
   /* margin 좌우 auto하면 가운데 정렬 */
   height: 15vh;
+  border-radius: 0 0 15px 15px;
 }
+
+.member {
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;  /* 필수는 아니지만 써주면 직관적으로 확인 가능 */
+  justify-content: flex-end; /* x축 */
+}
+
+
+/* 우선순위 규칙)
+태그이름(타입 셀렉터) - 1점
+클래스이름(클래스 셀렉터) - 10점
+아이디이름(id selector) - 100점 */
+
+/* .member -> 10점, li -> 1점, ::before(가상선택자) -> 1점 = 12점 */
+/* .member li::before{
+  content: ":";
+} */
+/* .first -> 10점, ::before(가상선택자) -> 1점 = 11점 */
+/* .member .first::before{
+  content: "첫번째";
+} */
+/* .member li:first-child::before{
+  content: "";
+} */
+/* !important 쓰면 이런 점수 다 무력화, 무조건 자기가 적용됨 */
+
+.member li:nth-child(n + 2)::before{
+  content: ":";
+}
+
+
 
 /* 비주얼 */
 .visual {
