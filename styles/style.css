@@ -1,10 +1,21 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+/* 숨김 스타일 */
+.a11y-hidden{
+  background: yellow;
+  position: absolute;
+  top: -9999em;
+}
+
 /* 기본 스타일 */
 *, *::before, *::after {       /* 전체 선택자 */
   box-sizing: border-box;  /* width(padding+border) + margin = border-box */
 
+}
+
+html {
+  font-size: 10px;
 }
 
 /* 링크 스타일 */
@@ -16,6 +27,9 @@ a {
 
 /* 본문 스타일 */
 body {
+  /* 단위) em - 상속받은 값을 기준으로 계산 */
+  /* rem-상속을 따지지 않고 루트인 html(루트)에 가서 연산 시작 */
+  font-size: 1.4rem; 
   color: #212121;
   background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -33,7 +47,6 @@ body {
   padding: 0 30px;
   /* margin은 투명한 영역이라 상자가 이동한게 아니라 커진거임 */
   /* margin 좌우 auto하면 가운데 정렬 */
-  height: 15vh;
   border-radius: 0 0 15px 15px;
   position: relative;
 }
