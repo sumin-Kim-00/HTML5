@@ -118,6 +118,7 @@ body {
 }
 
 .menu-item{
+  position: relative;
   float: left;
   border-left: 2px solid #fff;
 }
@@ -144,12 +145,21 @@ body {
   border-top: 2px solid #000;
 }
 
-
-
 .sub-menu {
   background: pink;
   position: absolute;
+  left: 0;
+  top: 47px;
   display: none;
+}
+
+.is-active .sub-menu {
+  display: block;
+}
+
+.sub-menu li {
+  /* float: left; */
+  /* display: inline-block; */
 }
 
 
