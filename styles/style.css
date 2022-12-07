@@ -60,6 +60,8 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  /* 밑에 깔린거를 올리기 위해 다 0 값이니까 0보다 큰 숫자 아무거나 줌 */
+  z-index: 10;  
 }
 
 
