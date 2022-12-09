@@ -359,15 +359,6 @@ body {
   padding: 10px 10px 0 10px;
 }
 
-.user-email {
-  
-}
-
-.user-pw {
-  
-}
-
-
 .login-form label {
   display: inline-block;
   /* 4글자만큼 width */
