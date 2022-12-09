@@ -3,11 +3,11 @@
 @import url(./reset.css);
 
 /* 숨김 콘텐츠 */
-.a11y-hidden{
-  /* position: absolute; */
+.a11y-hidden, legend{
+  position: absolute;
   width: 1px;
   height: 1px;
-  overflow: hidden;  
+  overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
   
 }
@@ -288,13 +288,15 @@ body {
 
 /* 메인 */
 .main {
-  background: lightgreen;
-  height: 50vh;
+  background: #fff;
+  min-height: 450px;
   display: flow-root;
   /* overflow: hidden; */
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
 
+/* legend {display: false;} */
 
 .group{
   margin: 0 15px;
@@ -302,9 +304,26 @@ body {
 }
 
 .group1{
-  background: violet;
+  /* background: violet; */
   width: 250px;
+  /* border-radius: 10px;
+  padding: 10px;
+  margin-top: 30px;
+  width: 250px;
+  height: 150px; */
 } 
+
+/* legend 안보이게 설정. 이렇게하면 접근성을 준수하면서 디자인을 해치지 않습니다. */
+/* legend {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+} */
+
 
 .group2{
   background: salmon;
@@ -315,6 +334,103 @@ body {
   background: gold;
   width: 190px;
 }
+
+/* 로그인 */
+.login {
+  box-shadow: 5px 5px 0 0 #ccc;
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  height: 150px;
+}
+
+.login-title{
+  color: #ff0;
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;  
+}
+
+.login-form {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.user-email {
+  
+}
+
+.user-pw {
+  
+}
+
+
+.login-form label {
+  display: inline-block;
+  /* 4글자만큼 width */
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 22px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+
+
+.login-form fieldset{
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+}
+
+.user-email, .user-pw {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.login-button {
+  background-color: orangered;
+  color: white;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 50px;
+  font-size: 13px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0 8px;
+}
+
+.sign {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+  font-size: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.sign a {
+  display: block;
+  padding: 5px 0;
+  letter-spacing: -1px;
+}
+
+.sign a::before {
+  content: '\e804';
+  color: orangered;
+  font-family: 'fontello';
+  margin-right: 8px;
+}
+
 
 /* 슬로건 */
 .slogan {
