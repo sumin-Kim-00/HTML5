@@ -338,7 +338,7 @@ body {
 /* 로그인 */
 .login {
   box-shadow: 5px 5px 0 0 #ccc;
-  background: orange radial-gradient(circle at right top, orange, orangered);
+  background: #ed552f radial-gradient(circle at right top, #e8852e, #ed552f);
   padding: 10px;
   border-radius: 5px;
   width: 250px;
@@ -387,7 +387,7 @@ body {
 }
 
 .login-button {
-  background-color: orangered;
+  background-color: #ed552f;
   color: white;
   position: absolute;
   top: 0px;
@@ -417,7 +417,7 @@ body {
 
 .sign a::before {
   content: '\e804';
-  color: orangered;
+  color: #ed552f;
   font-family: 'fontello';
   margin-right: 8px;
 }
