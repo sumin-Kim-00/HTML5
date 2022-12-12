@@ -444,10 +444,65 @@ body {
   border: 1px solid #aaa;
 }
 
-
 .validation-list a:hover,
 .validation-list a:focus {
   color: red;
+}
+
+
+/* 웹 관련 용어 */
+.term {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.term-title {
+  font-size: 15px;  /* 1.5rem 과 같음(루트가 10px이니까) */
+  font-weight: 700;
+}
+
+.term-list {
+  margin-top: 10px;
+  background-color: yellow;
+}
+
+.term-list div {
+  background-color: pink;
+  margin-top: 10px;
+  display: flow-root;
+}
+
+.term-list-subject {
+  background-color: lime;
+  color: #296897;
+  float: right;
+  width: 145px;
+}
+
+.term-list-thumbnail {
+  float: left;
+  display: inline-block;
+  background-color: purple;
+}
+
+.term-list-brief {
+  background-color: coral;
+  float: right;
+  width: 145px;
+}
+
+/* 이미지 하단에 보이는 여백을 줄이기 위해 */
+.term-list-thumbnail img {
+  /* display: block;  이렇게 해도 되는데 나중에 배치 어려울 수 있음 */
+  vertical-align: middle;
+}
+
+.term-list-subject, .term-list-brief {
+  /* float: right; */
+  /* width: 45px; */
 }
 
 
