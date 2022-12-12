@@ -528,7 +528,7 @@ body {
 .form-group-label{
   /* 줄 넘어감 방지 하는거 밑에 두가지 방법 다 가능 */
   /* white-space: nowrap; */
-  flex-shrink: 0;
+  flex-shrink: 0;  /* 축소, 크기가 부족하면 축소할거야~ */
 }
 
 .form-group-input {
