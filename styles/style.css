@@ -466,32 +466,30 @@ body {
 
 .term-list {
   margin-top: 10px;
-  background-color: yellow;
 }
 
 .term-list div {
-  background-color: pink;
   margin-top: 10px;
   display: flow-root;
 }
 
-.term-list-subject {
-  background-color: lime;
-  color: #296897;
+.term-list-subject, .term-list-brief {
   float: right;
   width: 145px;
+}
+
+.term-list-subject {
+  color: #296897;
+  font-weight: 500;
 }
 
 .term-list-thumbnail {
   float: left;
-  display: inline-block;
-  background-color: purple;
 }
 
 .term-list-brief {
-  background-color: coral;
-  float: right;
-  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5;
 }
 
 /* 이미지 하단에 보이는 여백을 줄이기 위해 */
@@ -500,11 +498,14 @@ body {
   vertical-align: middle;
 }
 
-.term-list-subject, .term-list-brief {
-  /* float: right; */
-  /* width: 45px; */
+.cross .term-list-brief, 
+.cross .term-list-subject {
+  float: left;
 }
 
+.cross .term-list-thumbnail{
+  float: right;
+}
 
 /* 슬로건 */
 .slogan {
