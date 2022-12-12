@@ -526,15 +526,15 @@ body {
 }
 
 .form-group-label{
-  white-space: nowrap;
+  /* 줄 넘어감 방지 하는거 밑에 두가지 방법 다 가능 */
+  /* white-space: nowrap; */
+  flex-shrink: 0;
 }
 
 .form-group-input {
   flex-grow: 1;
-  /* width: 190px; */
-  /* 브라우저 별로 width 다른걸 해결하기 위해 */
-  /* min-width: 0;
-  max-width: 100%; */
+  /* 브라우저 별로 width 다른걸 해결하기 위해 width 100%*/
+  width: 100%;
   margin-left: 10px;
   border: 1px solid #aaa;
   border-radius: 3px;
@@ -543,7 +543,7 @@ body {
 }
 
 .search-button {
-  white-space: nowrap;
+  flex-shrink: 1;
   background-color: black;
   color: white;
   height: 24px;
