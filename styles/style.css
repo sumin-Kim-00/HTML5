@@ -1,4 +1,5 @@
 @import url(./fonts.css);
+@import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
 
@@ -15,7 +16,6 @@
 /* 기본 스타일 */
 *, *::before, *::after {       /* 전체 선택자 */
   box-sizing: border-box;  /* width(padding+border) + margin = border-box */
-
 }
 
 html {
@@ -281,7 +281,7 @@ body {
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out; */
   animation: moveEffect 400ms ease-in-out forwards;
-  /* display: inline-block; */
+  display: inline-block;
   position: relative; /* inline-block 말고 이렇게 해도 됨 */
   z-index: 1;
 }
@@ -326,12 +326,10 @@ body {
 
 
 .group2{
-  background: salmon;
   width: 380px;
 }
 
 .group3{
-  background: gold;
   width: 190px;
 }
 
@@ -507,12 +505,61 @@ body {
   float: right;
 }
 
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 15px 15px 0 0;  
+  padding: 15px 25px 10px;
+}
+
+.search-form-inner {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form-group {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.form-group-label{
+  white-space: nowrap;
+}
+
+.form-group-input {
+  flex-grow: 1;
+  /* width: 190px; */
+  /* 브라우저 별로 width 다른걸 해결하기 위해 */
+  /* min-width: 0;
+  max-width: 100%; */
+  margin-left: 10px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+}
+
+.search-button {
+  white-space: nowrap;
+  background-color: black;
+  color: white;
+  height: 24px;
+  border: none;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
   height: 10vh;
-  /* clear: both;
-  margin-top: 10px; */
+  clear: both;
+  /* margin-top: 10px; */
 }
 /* 푸터 */
 .footer {
