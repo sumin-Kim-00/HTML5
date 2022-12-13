@@ -2,6 +2,7 @@
 @import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./module.css);
 
 /* 숨김 콘텐츠 */
 .a11y-hidden, legend{
@@ -640,7 +641,7 @@ body {
 }
 
 .news-title {
-  color: #ed552f;
+  /* color: #ed552f; */
   font-size: 15px;
   font-weight: 700;
 }
@@ -688,6 +689,87 @@ body {
 }
 
 
+/* 신규이벤트 및 관련 사이트 */
+
+.event {
+  border-bottom: 1px solid #aaa;
+  position: relative;
+}
+
+/* position 말고 이 방법도 가능 */
+/* .event-title {
+  display: inline-block;
+} */
+
+
+.event-button-wrapper {
+  height: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /* flex 아이템끼리 5px떨어지게함 - 근데 ie에서 지원안함 */
+  gap: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* IR 기법 - 텍스트 안보이게 하고 배경이미지가 보이게 */
+.event-button {
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 18px 0 0 0;
+  background: url(./images/back_forward.png) no-repeat;
+}
+
+.event-button:focus {
+  outline-offset: -2px;
+}
+
+.event-button-prev {
+  background-position: 0 0;
+}
+
+.event-button-next {
+  background-position: -36px 0;
+}
+
+
+.event-thumbnail, .event-brief {
+  margin: 10px 0;  /* 등간격으로 떨어짐 */
+}
+
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+.event-brief {
+  line-height: 1.5;
+}
+
+.related {
+  margin-top: 10px;
+}
+
+.related-list {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 27px;
+  overflow: hidden;
+  padding: 0 0 0 25px;
+  line-height: 1.8;
+  transition: height 400ms 0ms, padding 400ms 400ms;
+}
+
+.related-list:hover, .related-list.focus {
+  height: 147px;
+  padding: 10px 0 0 25px;
+}
 
 
 /* 슬로건 */
