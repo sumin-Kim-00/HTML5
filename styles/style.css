@@ -675,6 +675,11 @@ body {
   text-align: center;
 }
 
+.news-item-thumbnail img {
+  box-shadow: 0 15px 10px 5px #ccc;
+  margin-bottom: 20px;
+}
+
 .news-more {
   position: absolute;
   right: -8px;
