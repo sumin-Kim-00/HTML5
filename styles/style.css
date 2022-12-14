@@ -35,7 +35,6 @@ body {
   padding: 0 30px;
   /* margin은 투명한 영역이라 상자가 이동한게 아니라 커진거임 */
   /* margin 좌우 auto하면 가운데 정렬 */
-  height: 15vh;
   border-radius: 0 0 15px 15px;
 }
 
@@ -77,12 +76,12 @@ body {
 /* 비주얼 */
 .visual {
   background: orange;
-  height: 10vh;
+  height: 120px;
 }
 
 /* 메인 */
 .main {
-  background: lightgreen;
+  background: #fff;
   /* height: 50vh; */
   min-height: 450px;
   display: flex;
@@ -95,26 +94,25 @@ body {
 }
 
 .group1{
-  background: violet;
   width: 250px;
+  float: right;
 } 
 
 .group2{
-  background: salmon;
   width: 380px;
+  float: right;
 }
 
 .group3{
-  background: gold;
   width: 190px;
+  float: right;
 }
 
 /* 슬로건 */
 .slogan {
   background: skyblue;
   height: 10vh;
-  /* clear: both;
-  margin-top: 10px; */
+  clear: both;
 }
 /* 푸터 */
 .footer {
