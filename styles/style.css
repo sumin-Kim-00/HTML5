@@ -877,13 +877,51 @@ body {
 }
 
 
-
 /* 푸터 */
 .footer {
   background: #ccc 
   linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
+
 }
 .footer-inner{
-  background: silver;
-  height: 15vh;
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.footer-logo{
+  width: 150px;
+  padding: 20px 0 0 35px;
+
+}
+
+.footer-inner-wrapper {
+  flex: 1;
+  /* margin-top: 10px; */
+}
+
+.guide-list {
+  display: flex;
+  /* margin-bottom: 10px; */
+  background-color: #7b8385;
+  color: white;
+  padding: 4px 35px;
+  justify-content: space-between; /* 배분 정렬 */
+  text-transform: uppercase;
+  border-radius: 30px;
+}
+
+.guide-list a {
+  display: block;
+  padding: 6px 10px;
+}
+
+.address, .copyright {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+
+.badge-wrapper {
 }
