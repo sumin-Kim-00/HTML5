@@ -772,6 +772,65 @@ body {
 }
 
 
+/* 인기 사이트 */
+
+.favorite {
+  position: relative;
+}
+
+.favorite-list {
+  /* background-color: yellow; */
+  list-style: none;
+  counter-reset: var-count 10;
+}
+
+.favorite-list li {
+  margin-top: 10px;
+  counter-increment: var-count;  /* 변수명 쓰고 싶은거 씀 */
+  display: flex;
+  align-items: center;
+}
+
+.favorite-list li::before {
+  content: counter(var-count);
+  background-color: #aaa;
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  border-radius: 3px;
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.up, .stop, .down {
+  display: inline-block;
+  margin-left: auto;
+  width: 20px;
+  height: 11px;
+  background: url(./images/rank.png) no-repeat;
+}
+
+
+.stop {
+  background-position: 0 48%;
+}
+
+.down {
+  background-position: 0 100%;
+}
+
+
+.favorite-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
